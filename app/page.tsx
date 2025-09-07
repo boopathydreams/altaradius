@@ -1,5 +1,10 @@
 import Image from 'next/image';
-import { CheckCircleIcon } from '@heroicons/react/24/outline';
+import {
+  CubeIcon,
+  TruckIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+} from '@heroicons/react/24/outline';
 
 export default function Home() {
   return (
@@ -32,7 +37,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <div className='relative isolate px-6 pt-14 lg:px-8'>
+      <div className='relative isolate px-6 lg:px-8'>
         <div
           className='absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80'
           aria-hidden='true'
@@ -40,7 +45,7 @@ export default function Home() {
           <div className='relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-blue-400 to-cyan-300 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]'></div>
         </div>
 
-        <div className='mx-auto max-w-4xl py-32 sm:py-48 lg:py-56'>
+        <div className='mx-auto max-w-4xl py-8 sm:py-12 lg:py-16'>
           <div className='text-center'>
             {/* Coming Soon Badge */}
             <div className='inline-flex items-center rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 ring-1 ring-inset ring-blue-500/20 mb-8'>
@@ -57,35 +62,62 @@ export default function Home() {
             </h1>
 
             {/* Subtitle */}
-            <p className='mt-6 text-lg leading-8 text-gray-300'>
+            <p className='mt-4 text-lg leading-8 text-gray-300'>
               Revolutionizing business operations for transport, construction,
               mining, and industrial sectors. Comprehensive ERP platform with
               advanced inventory management, supply chain optimization, and
               fraud prevention.
             </p>
 
-            {/* Features List */}
-            <div className='mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-300'>
-              <div className='flex items-center space-x-2'>
-                <CheckCircleIcon className='h-5 w-5 text-green-400' />
-                <span>Inventory Management</span>
+            {/* Features Cards */}
+            <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto'>
+              <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-colors'>
+                <div className='flex justify-center mb-3'>
+                  <CubeIcon className='h-8 w-8 text-blue-400' />
+                </div>
+                <h3 className='font-semibold text-white text-sm mb-1'>
+                  Inventory Management
+                </h3>
+                <p className='text-xs text-gray-400'>
+                  Real-time tracking & control
+                </p>
               </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircleIcon className='h-5 w-5 text-green-400' />
-                <span>Supply Chain Solutions</span>
+
+              <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-colors'>
+                <div className='flex justify-center mb-3'>
+                  <TruckIcon className='h-8 w-8 text-green-400' />
+                </div>
+                <h3 className='font-semibold text-white text-sm mb-1'>
+                  Supply Chain Solutions
+                </h3>
+                <p className='text-xs text-gray-400'>End-to-end optimization</p>
               </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircleIcon className='h-5 w-5 text-green-400' />
-                <span>Fraud Prevention</span>
+
+              <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-colors'>
+                <div className='flex justify-center mb-3'>
+                  <ShieldCheckIcon className='h-8 w-8 text-red-400' />
+                </div>
+                <h3 className='font-semibold text-white text-sm mb-1'>
+                  Fraud Prevention
+                </h3>
+                <p className='text-xs text-gray-400'>
+                  Advanced security measures
+                </p>
               </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircleIcon className='h-5 w-5 text-green-400' />
-                <span>Business Intelligence</span>
+
+              <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center hover:bg-white/10 transition-colors'>
+                <div className='flex justify-center mb-3'>
+                  <ChartBarIcon className='h-8 w-8 text-purple-400' />
+                </div>
+                <h3 className='font-semibold text-white text-sm mb-1'>
+                  Business Intelligence
+                </h3>
+                <p className='text-xs text-gray-400'>Data-driven insights</p>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className='mt-10 flex flex-col items-center justify-center gap-6'>
+            <div className='mt-8 flex flex-col items-center justify-center gap-4'>
               <div className='text-center'>
                 <p className='text-lg text-gray-300 mb-2'>
                   Interested in learning more?
@@ -129,8 +161,8 @@ export default function Home() {
             </div>
 
             {/* Launch Timeline */}
-            <div className='mt-16 text-center'>
-              <p className='text-sm text-gray-400 mb-4'>Expected Launch</p>
+            <div className='mt-8 text-center'>
+              <p className='text-sm text-gray-400 mb-2'>Expected Launch</p>
               <p className='text-2xl font-bold text-white'>Q4 2025</p>
             </div>
           </div>
